@@ -1,0 +1,40 @@
+#Membuat Folder/Directory baru yaitu Project_Sistem Operasi B
+alifathan@alifathan-VirtualBox: $ ls
+alifathan@alifathan-VirtualBox: ~/Project_Sistem Operasi B
+report.txt
+Templates Videos
+snap
+a1.zip a3.zip a5.zip Desktop Downloads Logs Pictures a2.zip a4.zip achives documents images Music Public alifathan
+@alifathan-VirtualBox: $ mkdir "Project_Sistem Operasi B" alifathan
+@alifathan-VirtualBox: $ ls
+a1.zip a4.zip Desktop a2.zip a5.zip documents a3.zip achives Downloads
+images Pictures report.txt Videos
+Logs 'Project_Sistem Operasi B' snap Music Public Templates
+
+#Membuat folder src, doc, data di dalam folder Project_Sistem Operasi B
+alifathan@alifathan-VirtualBox:~$ cd "Project_Sistem Operasi B" 
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ ls
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ mkdir src doc data alifathan
+@alifathan-VirtualBox:~/Project_Sistem Operasi B$ ls data doc src
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ |
+
+#membuat file kosong dengan perintah "README.md src/main.sh"
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ ls
+data doc src
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ touch README.md src/main.sh 
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ ls
+data doc README.md src
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ cd src 
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B/src$ ls
+main.sh
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B/src$
+
+#menampilkan Isi Project_os dalam format yang mudah di baca
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ ls -R
+data doc README.md src
+./data:
+./doc:
+./src: main.sh
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$ du -sh
+16K
+alifathan@alifathan-VirtualBox:~/Project_Sistem Operasi B$
