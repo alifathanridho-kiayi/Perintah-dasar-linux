@@ -1,0 +1,19 @@
+alifathan@alifathan-VirtualBox: $ ls
+Desktop Downloads Music Pictures Public snap Templates Videos alifathan@alifathan-VirtualBox:~$ mkdir documents images achives logs alifathan@alifathan-VirtualBox:~$ ls
+achives documents images Music Public Templates Desktop Downloads logs Pictures snap Videos
+alifathan@alifathan-VirtualBox: $ touch d1.txt d2.txt d3.txt d4.txt d5.txt
+alifathan@alifathan-VirtualBox: $ echo > i1.jpg
+alifathan@alifathan-VirtualBox: $ echo > i2.jpg
+alifathan@alifathan-VirtualBox: $ echo > 13.jpg
+F
+alifathan@alifathan-VirtualBox: $ echo > i4.jpg
+alifathan@alifathan-VirtualBox: $ touch a1.zip a2.zip a3.zip a4.zip a5.zip alifathan@alifathan-VirtualBox: $ touch 11.log 12.log 13.log 14. log 15.log alifathan@alifathan-VirtualBox:~$ ls
+a1.zip a5.zip d3.txt documents 13.jpg 11.log 15.log a2.zip achives d4.txt Downloads 14.jpg 12.log logs a3.zip d1.txt d5.txt i1.jpg
+a4.zip d2.txt
+15.jpg 13.log Music
+Public
+snap
+Templates
+Desktop 12.jpg images 14.log Pictures Videos
+alifathan@alifathan-VirtualBox:~$
+alifathan@alifathan-VirtualBox: $ echo > i5.jpg
