@@ -1,13 +1,20 @@
+#Membuat Directory/Folder
 alifathan@alifathan-VirtualBox: $ ls
-Desktop Downloads Music Pictures Public snap Templates Videos alifathan@alifathan-VirtualBox:~$ mkdir documents images achives logs alifathan@alifathan-VirtualBox:~$ ls
+Desktop Downloads Music Pictures Public snap Templates Videos 
+alifathan@alifathan-VirtualBox:~$ mkdir documents images achives logs 
+alifathan@alifathan-VirtualBox:~$ ls
 achives documents images Music Public Templates Desktop Downloads logs Pictures snap Videos
+
+#Membuat File Menggunakan Touch Dan Echo
 alifathan@alifathan-VirtualBox: $ touch d1.txt d2.txt d3.txt d4.txt d5.txt
 alifathan@alifathan-VirtualBox: $ echo > i1.jpg
 alifathan@alifathan-VirtualBox: $ echo > i2.jpg
 alifathan@alifathan-VirtualBox: $ echo > 13.jpg
-F
 alifathan@alifathan-VirtualBox: $ echo > i4.jpg
-alifathan@alifathan-VirtualBox: $ touch a1.zip a2.zip a3.zip a4.zip a5.zip alifathan@alifathan-VirtualBox: $ touch 11.log 12.log 13.log 14. log 15.log alifathan@alifathan-VirtualBox:~$ ls
+alifathan@alifathan-VirtualBox: $ echo > i5.jpg
+alifathan@alifathan-VirtualBox: $ touch a1.zip a2.zip a3.zip a4.zip a5.zip 
+alifathan@alifathan-VirtualBox: $ touch 11.log 12.log 13.log 14. log 15.log 
+alifathan@alifathan-VirtualBox:~$ ls
 a1.zip a5.zip d3.txt documents 13.jpg 11.log 15.log a2.zip achives d4.txt Downloads 14.jpg 12.log logs a3.zip d1.txt d5.txt i1.jpg
 a4.zip d2.txt
 15.jpg 13.log Music
@@ -16,4 +23,105 @@ snap
 Templates
 Desktop 12.jpg images 14.log Pictures Videos
 alifathan@alifathan-VirtualBox:~$
-alifathan@alifathan-VirtualBox: $ echo > i5.jpg
+
+#perintah find mv dan cp
+alifathan@alifathan-VirtualBox: $ find. -type f -name "*.txt" -exec mv {} documents/ \; 
+mv: './documents/first-index.txt' and 'documents/first-index.txt' are the same file mv: './documents/last-crawl.txt' and 'documents/last-crawl.txt' are the same file alifathan@alifathan-VirtualBox: $ find. -type f -name "*.jpg" -exec mv {} images/ \; 
+mv: './images/i1.jpg' and 'images/i1.jpg' are the same file 
+mv: './images/i2.jpg' and 'images/i2.jpg' are the same file 
+mv: './images/i3.jpg' and 'images/i3.jpg' are the same file 
+mv: './images/i4.jpg' and 'images/i4.jpg' are the same file 
+mv: './images/i5.jpg' and 'images/i5.jpg' are the same file
+alifathan@alifathan-VirtualBox: $ find . -type f -name "*.zip" -exec cp {} achives/ \;
+cp: './achives/a5.zip' and 'achives/a5.zip' are the same file 
+cp: './achives/a3.zip' and 'achives/a3.zip' are the same file 
+cp: './achives/a4.zip' and 'achives/a4.zip' are the same file 
+cp: './achives/a2.zip' and 'achives/a2.zip' are the same file 
+cp: './achives/a1.zip' and 'achives/a1.zip' are the same file
+alifathan@alifathan-VirtualBox: $ find . -type f -name "*.log" -exec mv {} logs/ \; 
+mv: './logs/12.log' and 'logs/12.log' are the same file 
+mv: './logs/l1.log' and 'logs/l1.log' are the same file
+mv: ./logs/13.log' and 'logs/13.log' are the same file
+mv: mv:
+./logs/root-d12d8f69.log' and 'logs/root-d12d8f69.log' are the same file ./logs/l4.log' and 'logs/l4.log' are the same file
+mv: ./logs/15. log' and 'logs/15. log' are the same file
+mv:
+./logs/home-37f979cc.log' and 'logs/home-37f979cc.log' are the same file alifathan@alifathan-VirtualBox: $ ls
+Pictures snap
+Music Public Templates
+a1.zip a3.zip a5.zip Desktop Downloads logs a2.zip a4.zip achives documents images 
+alifathan@alifathan-VirtualBox:~$ cd documents 
+alifathan@alifathan-VirtualBox:~/documents$ ls
+d1.txt d2.txt d3.txt d4.txt d5.txt first-index.txt last-crawl.txt 
+
+#Mencari File Menggunakan Find Dan Grep
+alifathan@alifathan-VirtualBox:~/documents$
+alifathan@alifathan-VirtualBox:~$ find ~/achives -type f -name "*.zip" 
+/home/alifathan/achives/a5.zip
+/home/alifathan/achives/a3.zip
+/home/alifathan/achives/a4.zip
+/home/alifathan/achives/a2.zip
+/home/alifathan/achives/al.zip
+alifathan@alifathan-VirtualBox: $ find ~/achives -type f -size -300k -exec ls -lh {} \;
+-rw-rw-r-- 1 alifathan alifathan 14 Nov 11 13:38 /home/alifathan/achives/a5.zip 
+-rw-rw-r-- 1 alifathan alifathan 15 Nov 11 13:37 /home/alifathan/achives/a3.zip 
+-rw-rw-r-- 1 alifathan alifathan 17 Nov 11 13:37 /home/alifathan/achives/a4.zip 
+-rw-rw-r-- 1 alifathan alifathan 16 Nov 11 13:36 /home/alifathan/achives/a2.zip 
+-rw-rw-r-- 1 alifathan alifathan 16 Nov 11 13:36 /home/alifathan/achives/a1.zip 
+alifathan@alifathan-VirtualBox: $ grep -r "alifathan" ~/achives 
+/home/alifathan/achives/a5.zip:alifathan ali
+/home/alifathan/achives/a3.zip:alifathan kece
+/home/alifathan/achives/a4.zip:alifathan fathan
+/home/alifathan/achives/a2.zip:alifathan kiayi
+/home/alifathan/achives/a1.zip:alifathan ridho
+alifathan@alifathan-VirtualBox:~$
+
+#membuat laporan statistik output ke file report text menggunakan perintah ls,wc,du,dan piping
+alifathan@alifathan-VirtualBox:~$ {
+echo "=== LAPORAN STATISTIK FILE SISTEM ==="
+echo
+echo "[1] Daftar File dan Folder:"
+ls -l
+echo
+echo "[2] Jumlah File & Folder: "
+ls | wc -l
+echo
+echo "[3] Total Ukuran DirektORI:" du -sh
+}> report.txt
+alifathan@alifathan-VirtualBox: $ cat eport text
+cat: eport: No such file or directory 
+cat: text: No such file or directory 
+alifathan@alifathan-VirtualBox:~$ cat report.txt 
+=== LAPORAN STATISTIK FILE SISTEM ===
+
+[1] Daftar File dan Folder: total 52
+2025 achives 
+10:05 Desktop
+-rw-rw-r-- 1 alifathan alifathan 0 Nov 11 2025 a1.zip  
+-rw-rw-r-- 1 alifathan alifathan 0 Nov 11 2025 a2.zip
+-rw-rw-r-- 1 alifathan alifathan 0 Nov 11 2025 a3.zip
+-rw-rw-r-- 1 alifathan alifathan 0 Nov 11 2025 a4.zip
+-rw-rw-r-- 1 alifathan alifathan 0 Nov 11 2025 a5.zip
+drwxrwxr-x 2 alifathan alifathan 4096 Nov 11 2025 achives
+drwxr-xr-x 2 alifathan alifathan 4096 Nov 7 10:05 Desktop
+drwxrwxr-x 2 alifathan alifathan 4096 Nov 11 2025 documents
+drwxr-xr-x 2 alifathan alifathan 4096 Nov 7 10:05 Downloads
+drwxrwxr-x 2 alifathan alifathan 4096 Nov 11 2025 images
+drwxrwxr-x 2 alifathan alifathan 4096 Nov 11 2025 logs
+drwxr-xr-x 2 alifathan alifathan 4096 Nov 7 10:05 Music
+drwxr-xr-x 3 alifathan alifathan 7 11:08 Pictures
+drwxr-xr-x 2 alifathan alifathan 4096 Nov 7 10:05 Public 
+-rw-rw-r-- 1 alifathan alifathan 67 Nov 10 22:14 report.txt 
+drwx--- 4 alifathan alifathan 4096 Nov 11
+drwxr-xr-x 2 alifathan alifathan 4096 Nov
+-----
+2025 snap
+7 10:05 Templates
+drwxr-xr-x 2 alifathan alifathan 4096 Nov 7 10:05 Videos
+
+[2] Jumlah File & Folder:
+18
+
+[3] Total Ukuran DirektORI:
+210M
+alifathan@alifathan-VirtualBox:~$
